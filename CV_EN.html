@@ -1025,6 +1025,13 @@
       }
 
       pdf.save("CV Walid NEBILI.pdf");
+       // 🔹 Tracker le clic avant de générer le PDF
+      if (typeof gtag === 'function') {
+        gtag('event', 'download_cv', {
+          event_category: 'engagement',
+          event_label: 'PDF Generated'
+        });
+      }
     });
   </script>
 
