@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Walid NEBILI — Développeur Fullstack Senior</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-54VSJ5W2');</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFFZ1ZQ4XC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-ZFFZ1ZQ4XC');
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFFZ1ZQ4XC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-ZFFZ1ZQ4XC');
+  </script>
+  <!-- End Google Tag Manager -->
+  <style>
+    :root {
+      --navy: #1B3A6B;
+      --blue: #2E6DA4;
+      --blue-light: #4A9EDB;
+      --blue-pale: #EAF3FB;
+      --blue-mid: #D0E8F7;
+      --gray: #555;
+      --gray-light: #F4F7FA;
+      --white: #fff;
+      --text: #2a2a2a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #d0d8e4;
+      color: var(--text);
+      padding: 24px 16px;
+    }
+
+    /* ── A4 PAGE CONTAINER ── */
+    .a4-page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto 20px;
+      background: white;
+      box-shadow: 0 8px 40px rgba(27, 58, 107, 0.18);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ── HEADER (page 1 only) ── */
+    .cv-header {
+      background: var(--navy);
+      padding: 36px 44px 0;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .cv-header::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgba(74, 158, 219, 0.10);
+    }
+
+    .cv-header::after {
+      content: '';
+      position: absolute;
+      bottom: 10px;
+      left: 30px;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: rgba(74, 158, 219, 0.07);
+    }
+
+    .header-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 46px;
+      color: white;
+      letter-spacing: -1px;
+      line-height: 1;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-title {
+      font-size: 13px;
+      color: var(--blue-light);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-top: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-divider {
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue-light), transparent);
+      margin: 16px 0 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-bar {
+      background: var(--blue);
+      padding: 11px 44px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 24px;
+      flex-shrink: 0;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+    .contact-item svg {
+      opacity: 0.75;
+      flex-shrink: 0;
+    }
+
+    /* ── PAGE CONTENT AREA ── */
+    .page-content {
+      padding: 22px 44px 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── MINI HEADER (page 2+) ── */
+    .mini-header {
+      background: var(--navy);
+      padding: 10px 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+
+    .mini-header-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      color: white;
+      letter-spacing: -0.5px;
+    }
+
+    .mini-header-title {
+      font-size: 11px;
+      color: var(--blue-light);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* ── SECTION ── */
+    .section {
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 11.5px;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: var(--navy);
+      border-bottom: 2px solid var(--navy);
+      padding-bottom: 5px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      background: var(--blue-light);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    /* ── SUMMARY ── */
+    .summary-text {
+      font-size: 12.5px;
+      line-height: 1.7;
+      color: var(--gray);
+      border-left: 3px solid var(--blue-light);
+      padding-left: 14px;
+    }
+
+    .summary-text strong {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    /* ── JOB ── */
+    .job {
+      background: var(--gray-light);
+      border: 1px solid var(--blue-mid);
+      border-left: 4px solid var(--blue);
+      padding: 11px 14px;
+      margin-bottom: 10px;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .job-left {
+      flex: 1;
+    }
+
+    .job-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.3;
+    }
+
+    .job-company {
+      font-size: 11.5px;
+      font-weight: 500;
+      color: var(--blue);
+      margin-top: 2px;
+    }
+
+    .job-dates {
+      font-size: 11px;
+      color: var(--gray);
+      font-style: italic;
+      white-space: nowrap;
+    }
+
+    .job-bullets {
+      margin-top: 7px;
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .job-bullets li {
+      font-size: 11.5px;
+      color: var(--gray);
+      line-height: 1.45;
+      padding-left: 12px;
+      position: relative;
+    }
+
+    .job-bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--blue-light);
+      font-size: 10px;
+      top: 2px;
+    }
+
+    .job-bullets li strong {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .job-stack {
+      margin-top: 7px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .tag {
+      background: var(--blue-pale);
+      color: var(--blue);
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 2px;
+      border: 1px solid var(--blue-mid);
+    }
+
+    .tag.dotnet {
+      background: #EBF4FF;
+      color: var(--navy);
+      border-color: #b8d4ee;
+    }
+
+    /* ── SKILLS ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .skill-block {
+      background: var(--gray-light);
+      border: 1px solid var(--blue-mid);
+      padding: 9px 12px;
+    }
+
+    .skill-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 5px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+    }
+
+    .skill-tag {
+      font-size: 11px;
+      color: var(--gray);
+      background: white;
+      border: 1px solid #d0dae8;
+      padding: 1px 7px;
+      border-radius: 2px;
+    }
+
+    .skill-tag.primary {
+      background: var(--navy);
+      color: white;
+      border-color: var(--navy);
+    }
+
+    /* ── EDUCATION ── */
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      background: var(--gray-light);
+      border: 1px solid var(--blue-mid);
+      padding: 10px 14px;
+      margin-bottom: 8px;
+      gap: 12px;
+    }
+
+    .edu-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .edu-degree {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .edu-school {
+      font-size: 11.5px;
+      color: var(--blue);
+      margin-top: 2px;
+    }
+
+    .edu-year {
+      font-size: 12px;
+      font-style: italic;
+      color: var(--gray);
+      white-space: nowrap;
+    }
+
+    /* ── LANGUAGES ── */
+    .langs-row {
+      display: flex;
+      gap: 8px;
+    }
+
+    .lang-item {
+      flex: 1;
+      background: var(--gray-light);
+      border: 1px solid var(--blue-mid);
+      border-top: 3px solid var(--blue);
+      padding: 9px 12px;
+      text-align: center;
+    }
+
+    .lang-name {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .lang-level {
+      font-size: 10.5px;
+      color: var(--gray);
+      margin-top: 2px;
+    }
+
+    /* ── INTERESTS ── */
+    .interests-text {
+      font-size: 12.5px;
+      color: var(--gray);
+      line-height: 1.7;
+      font-style: italic;
+      border-left: 3px solid var(--blue-light);
+      padding-left: 14px;
+    }
+
+    /* ── PRINT BUTTON ── */
+    .print-fab {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      background: var(--navy);
+      color: white;
+      border: none;
+      padding: 13px 22px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 4px;
+      box-shadow: 0 6px 24px rgba(27, 58, 107, 0.35);
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .print-fab:hover {
+      background: var(--blue);
+      transform: translateY(-2px);
+    }
+
+    /* ══════════════════════════════════════
+     PRINT — chaque .a4-page = 1 page A4
+  ══════════════════════════════════════ */
+    @media print {
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      html,
+      body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: white !important;
+      }
+
+      .print-fab {
+        display: none !important;
+      }
+
+      .a4-page {
+        box-shadow: none !important;
+        margin: 0 !important;
+        width: 210mm !important;
+        height: 297mm !important;
+        min-height: unset !important;
+        page-break-after: always;
+        break-after: page;
+        overflow: hidden !important;
+      }
+
+      .a4-page:last-child {
+        page-break-after: avoid;
+        break-after: avoid;
+      }
+
+      /* Force backgrounds */
+      .cv-header {
+        background: #1B3A6B !important;
+      }
+
+      .mini-header {
+        background: #1B3A6B !important;
+      }
+
+      .contact-bar {
+        background: #2E6DA4 !important;
+      }
+
+      .header-name,
+      .mini-header-name {
+        color: #ffffff !important;
+      }
+
+      .header-title,
+      .mini-header-title {
+        color: #4A9EDB !important;
+      }
+
+      .contact-item {
+        color: rgba(255, 255, 255, 0.92) !important;
+      }
+
+      .job {
+        background: #F4F7FA !important;
+        border-left: 4px solid #2E6DA4 !important;
+        border-top-color: #D0E8F7 !important;
+        border-right-color: #D0E8F7 !important;
+        border-bottom-color: #D0E8F7 !important;
+      }
+
+      .skill-block {
+        background: #F4F7FA !important;
+        border-color: #D0E8F7 !important;
+      }
+
+      .edu-item {
+        background: #F4F7FA !important;
+        border-color: #D0E8F7 !important;
+      }
+
+      .lang-item {
+        background: #F4F7FA !important;
+        border-color: #D0E8F7 !important;
+        border-top: 3px solid #2E6DA4 !important;
+      }
+
+      .skill-tag.primary {
+        background: #1B3A6B !important;
+        color: white !important;
+        border-color: #1B3A6B !important;
+      }
+
+      .skill-tag {
+        background: white !important;
+        border-color: #d0dae8 !important;
+      }
+
+      .tag {
+        background: #EAF3FB !important;
+        color: #2E6DA4 !important;
+        border-color: #D0E8F7 !important;
+      }
+
+      .tag.dotnet {
+        background: #EBF4FF !important;
+        color: #1B3A6B !important;
+        border-color: #b8d4ee !important;
+      }
+
+      .section-title {
+        color: #1B3A6B !important;
+        border-bottom: 2px solid #1B3A6B !important;
+      }
+
+      .section-title::before {
+        background: #4A9EDB !important;
+      }
+
+      .summary-text {
+        border-left: 3px solid #4A9EDB !important;
+        color: #555 !important;
+      }
+
+      .interests-text {
+        border-left: 3px solid #4A9EDB !important;
+        color: #555 !important;
+      }
+
+      .job-title {
+        color: #1B3A6B !important;
+      }
+
+      .job-company {
+        color: #2E6DA4 !important;
+      }
+
+      .job-bullets li::before {
+        color: #4A9EDB !important;
+      }
+
+      .edu-degree {
+        color: #1B3A6B !important;
+      }
+
+      .edu-school {
+        color: #2E6DA4 !important;
+      }
+
+      .lang-name {
+        color: #1B3A6B !important;
+      }
+
+      .skill-label {
+        color: #1B3A6B !important;
+      }
+
+      .header-divider {
+        background: linear-gradient(90deg, #4A9EDB, transparent) !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54VSJ5W2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="cv">
+    <!-- ════════════════════════════════════════════
+     PAGE 1  —  Header + Profil + Expériences 1-3
+════════════════════════════════════════════ -->
+    <div class="a4-page">
+
+      <div class="cv-header">
+        <div class="header-name">Walid NEBILI</div>
+        <div class="header-title">Senior Fullstack Developer &nbsp;·&nbsp; Java / Angular</div>
+        <div class="header-divider"></div>
+      </div>
+
+      <div class="contact-bar">
+        <a class="contact-item" href="mailto:mwalid.nebili@gmail.com">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+          mwalid.nebili@gmail.com
+        </a>
+        <a class="contact-item" href="tel:+33780812945">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.07 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z" />
+          </svg>
+          07 80 81 29 45
+        </a>
+        <span class="contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          France
+        </span>
+        <a class="contact-item" href="https://linkedin.com/in/walid-nebili-301b34113" target="_blank">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect width="4" height="12" x="2" y="9" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+          linkedin.com/in/walid-nebili-301b34113
+        </a>
+      </div>
+
+      <div class="page-content">
+
+        <!-- SUMMARY -->
+        <div class="section">
+          <div class="section-title">Professional Summary</div>
+          <p class="summary-text">
+            Senior Fullstack Developer with <strong>6+ years of experience</strong> in enterprise application
+            development, with proven expertise in <strong> Java/Spring Boot, and Angular</strong>,. Experienced
+            in designing microservices architectures and delivering large-scale international projects (Stellantis, EPO,
+            SNCF) with a strong focus on performance, scalability, and code quality. Solid background in <strong>Java
+              backend development</strong> (Capgemini BLS PLUS project) and <strong>.NET modernization</strong>
+            (Everis/NTT Data). Eager to deepen .NET ecosystem expertise in a challenging environment.
+          </p>
+        </div>
+
+
+
+        <div class="section">
+          <div class="section-title">Professional Experience</div>
+
+          <div class="job">
+            <div class="job-header">
+              <div class="job-left">
+                <div class="job-title">Senior Fullstack Software Engineer</div>
+                <div class="job-company">SFEIR — France</div>
+              </div>
+              <div class="job-dates">May 2025 – Present</div>
+            </div>
+            <ul class="job-bullets">
+              <li>Fullstack development of a Stellantis application suite using Java 17/Spring Boot 3 and Angular
+                17/TypeScript</li>
+              <li>Design of REST microservices with Apache Kafka, Spring Security, and Spring Data JPA</li>
+              <li>Technical collaboration with Stellantis teams to align solutions with business requirements</li>
+            </ul>
+            <div class="job-stack">
+              <span class="tag">Java 17</span><span class="tag">Spring Boot 3</span><span class="tag">Angular
+                17</span><span class="tag">TypeScript</span><span class="tag">Apache Kafka</span><span
+                class="tag">Microservices</span>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-header">
+              <div class="job-left">
+                <div class="job-title">Senior Software Developer</div>
+                <div class="job-company">ALTIA SL — Spain</div>
+              </div>
+              <div class="job-dates">Oct 2024 – Apr 2025</div>
+            </div>
+            <ul class="job-bullets">
+              <li>Maintenance of 15 critical Java and C# applications for the European Patent Organisation (EPO)</li>
+              <li>Performance optimization: significant reduction in document processing time</li>
+              <li>Technical support and resolution of critical production incidents</li>
+            </ul>
+            <div class="job-stack">
+              <span class="tag">C#</span><span class="tag">Entity Framework</span><span class="tag">Java
+                8/11/17</span><span class="tag">Spring Framework</span><span class="tag">Apache Kafka</span><span
+                class="tag">Kubernetes</span><span class="tag">PostgreSQL</span><span class="tag">SQL Server</span>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-header">
+              <div class="job-left">
+                <div class="job-title">Fullstack Software Developer</div>
+                <div class="job-company">DSI GROUP — Metz, France</div>
+              </div>
+              <div class="job-dates">May 2023 – Dec 2024</div>
+            </div>
+            <ul class="job-bullets">
+              <li>Development of a grants management system handling agricultural subsidy files for Luxembourg</li>
+              <li>Spring Boot / IBM DB2 architecture with Docker containerization and IBM WebSphere deployment</li>
+              <li>DB2 query optimization, reducing response times across key business workflows</li>
+              <li>Close collaboration with 3 business teams to define and implement complex business rules</li>
+            </ul>
+            <div class="job-stack">
+              <span class="tag dotnet">Java</span> <span class="tag dotnet">Spring Boot</span><span class="tag">IBM DB2</span><span class="tag">Docker</span><span
+                class="tag">IBM WebSphere</span><span class="tag">Angular</span><span class="tag">CI/CD Jenkins</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ════════════════════════════════════════════
+     PAGE 2  —  Expériences 4-6 + Compétences + Formation 
+════════════════════════════════════════════ -->
+    <div class="a4-page">
+
+      <div class="mini-header">
+        <div class="mini-header-name">Walid NEBILI</div>
+        <div class="mini-header-title"> Senior Fullstack Developer Java/ Angular</div>
+      </div>
+
+      <div class="page-content">
+
+        <div class="section">
+          <div class="section-title">Professional Experience (continued)</div>
+
+          <div class="job">
+            <div class="job-header">
+              <div class="job-left">
+                <div class="job-title">Fullstack Software Developer — <span style="color:var(--navy)">C# / .NET</span>
+                  &amp; Java</div>
+                <div class="job-company">CAPGEMINI — Murcia, Spain</div>
+              </div>
+              <div class="job-dates">Jan 2021 – May 2023</div>
+            </div>
+            <ul class="job-bullets">
+              <li>BLS PLUS project: self-service kiosks deployed in SNCF train stations (ticket purchase &amp;
+                after-sales operations)</li>
+              <li><strong>C# .NET backend</strong> (hardware layer), <strong>Java Spring backend</trong> (business layer), <strong>Angular
+                frontend</strong> with TPE/printer integration</li>
+              <li>Quality improvement: implementation of automated tests and monitoring tools</li>
+              <li>Technical support and collaboration with hardware teams for complex system integration</li>
+              <li>Mentoring and coaching of junior developers and interns</li>
+            </ul>
+            <div class="job-stack">
+              <span class="tag dotnet">Java</span><span class="tag dotnet">SpringBoot</span><span class="tag dotnet">C#</span>
+			  <span class="tag dotnet">Angular</span><span class="tag">TypeScript</span><span class="tag">REST
+                APIs</span><span class="tag">Automated Testing</span>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-header">
+              <div class="job-left">
+                <div class="job-title">Software Developer — <span style="color:var(--navy)">.NET</span> (Work-Study)
+                </div>
+                <div class="job-company">EVERIS / NTT DATA — Alicante, Spain</div>
+              </div>
+              <div class="job-dates">Sep 2019 – Jul 2020</div>
+            </div>
+            <ul class="job-bullets">
+              <li>Modernization of Repsol service station systems: migration from legacy to modern .NET architecture
+              </li>
+              <li>Technical analysis and customization of solutions to meet specific client requirements</li>
+            </ul>
+            <div class="job-stack">
+              <span class="tag dotnet">.NET Framework</span><span class="tag dotnet">C#</span><span class="tag">SQL
+                Server</span><span class="tag">Visual Basic</span><span class="tag">Classic ASP</span>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-header">
+              <div class="job-left">
+                <div class="job-title">GIS Developer — Internship</div>
+                <div class="job-company">SEAAL — Algiers, Algeria</div>
+              </div>
+              <div class="job-dates">Feb 2018 – Jul 2018</div>
+            </div>
+            <ul class="job-bullets">
+              <li>Multi-criteria analysis system for water pipeline maintenance in Algiers</li>
+              <li>ArcGIS extension developed in Python/ArcPy with PHP/JavaScript web dashboard</li>
+              <li>Preventive maintenance optimization: 25% cost reduction through intelligent prioritization</li>
+            </ul>
+            <div class="job-stack">
+              <span class="tag">Python</span><span class="tag">ArcGIS</span><span class="tag">ArcPy</span><span
+                class="tag">PHP</span><span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="section">
+          <div class="section-title">Technical Skills</div>
+          <div class="skills-grid">
+            <div class="skill-block">
+              <div class="skill-label">Backend</div>
+              <div class="skill-tags">
+                <span class="skill-tag primary">.NET / C#</span>
+                <span class="skill-tag primary">ASP.NET</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Spring Boot</span>
+                <span class="skill-tag">REST APIs</span>
+                <span class="skill-tag">Microservices</span>
+              </div>
+            </div>
+            <div class="skill-block">
+              <div class="skill-label">Frontend</div>
+              <div class="skill-tags">
+                <span class="skill-tag">Angular</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">HTML5 / CSS3</span>
+              </div>
+            </div>
+            <div class="skill-block">
+              <div class="skill-label">Databases</div>
+              <div class="skill-tags">
+                <span class="skill-tag primary">SQL Server</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">IBM DB2</span>
+                <span class="skill-tag">MySQL</span>
+              </div>
+            </div>
+            <div class="skill-block">
+              <div class="skill-label">DevOps &amp; Infra</div>
+              <div class="skill-tags">
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Kubernetes</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">CI/CD Jenkins</span>
+                <span class="skill-tag">IBM WebSphere</span>
+              </div>
+            </div>
+            <div class="skill-block">
+              <div class="skill-label">Messaging &amp; Security</div>
+              <div class="skill-tags">
+                <span class="skill-tag">Apache Kafka</span>
+                <span class="skill-tag">jBPM</span>
+                <span class="skill-tag">Spring Security</span>
+                <span class="skill-tag">Spring Data JPA</span>
+              </div>
+            </div>
+            <div class="skill-block">
+              <div class="skill-label">Practices</div>
+              <div class="skill-tags">
+                <span class="skill-tag">Software Architecture</span>
+                <span class="skill-tag">Performance Optim.</span>
+                <span class="skill-tag">Code Review</span>
+                <span class="skill-tag">Automated Testing</span>
+                <span class="skill-tag">Monitoring</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="section">
+          <div class="section-title">Education</div>
+          <div class="edu-item">
+            <div>
+              <div class="edu-degree">Master's Degree in Web Services &amp; Web Application Development</div>
+              <div class="edu-school">University of Alicante — Spain</div>
+            </div>
+            <div class="edu-year">2020</div>
+          </div>
+          <div class="edu-item">
+            <div>
+              <div class="edu-degree">Master's Degree in Software Engineering</div>
+              <div class="edu-school">Houari Boumediene University of Science &amp; Technology — Algeria</div>
+            </div>
+            <div class="edu-year">2018</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ════════════════════════════════════════════
+     PAGE 3  — Langues + Intérêts
+════════════════════════════════════════════ -->
+    <div class="a4-page">
+
+      <div class="mini-header">
+        <div class="mini-header-name">Walid NEBILI</div>
+        <div class="mini-header-title">Senior Fullstack Developer C# / Angular</div>
+      </div>
+
+      <div class="page-content">
+
+        <!-- LANGUAGES -->
+        <div class="section">
+          <div class="section-title">Languages</div>
+          <div class="langs-row">
+            <div class="lang-item">
+              <div class="lang-name">French</div>
+              <div class="lang-level">Native</div>
+            </div>
+            <div class="lang-item">
+              <div class="lang-name">Arabic</div>
+              <div class="lang-level">Native</div>
+            </div>
+            <div class="lang-item">
+              <div class="lang-name">English</div>
+              <div class="lang-level">C1 — Advanced</div>
+            </div>
+            <div class="lang-item">
+              <div class="lang-name">Spanish</div>
+              <div class="lang-level">B2 — Intermediate+</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- INTERESTS -->
+        <div class="section">
+          <div class="section-title">Interests</div>
+          <p class="interests-text">
+            Passionate about new technologies and innovation. Curious and autonomous, I enjoy tackling new technical
+            challenges and working in multicultural teams. Strong interest in software architecture and cloud-native
+            solutions.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- BOUTON IMPRIMER -->
+  <button id="download-pdf" class="print-fab">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 6 2 18 2 18 9" />
+      <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+      <rect x="6" y="14" width="12" height="8" />
+    </svg>
+    Print / Export PDF
+  </button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+    document.getElementById("download-pdf").addEventListener("click", async () => {
+      const { jsPDF } = window.jspdf;
+      const pdf = new jsPDF('p', 'mm', 'a4');
+      const pageHeight = pdf.internal.pageSize.getHeight();
+      const pageWidth = pdf.internal.pageSize.getWidth();
+
+      const pages = document.querySelectorAll('#cv .a4-page');
+
+      for (let i = 0; i < pages.length; i++) {
+        const canvas = await html2canvas(pages[i], { scale: 2, useCORS: true });
+        const imgData = canvas.toDataURL("image/png");
+
+        // Calculer la taille de l'image pour A4
+        const imgWidth = pageWidth;
+        const imgHeight = (canvas.height * pageWidth) / canvas.width;
+
+        pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+
+        if (i < pages.length - 1) pdf.addPage();
+      }
+
+      pdf.save("CV Walid NEBILI.pdf");
+       // 🔹 Tracker le clic avant de générer le PDF
+      if (typeof gtag === 'function') {
+        gtag('event', 'download_cv', {
+          event_category: 'engagement',
+          event_label: 'PDF Generated'
+        });
+      }
+    });
+  </script>
+
+</body>
+
+</html>
